@@ -14,6 +14,7 @@ const gameMessages = {
 }
 
 const playGame = (userName, gameFunction, gameMessage) => {
+  console.log('Welcome to the Brain Games!')
   console.log(gameMessage)
 
   for (let round = 0; round < 3; round += 1) {
