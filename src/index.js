@@ -3,12 +3,14 @@ import gameEven from './games/gameEven.js'
 import gameCalc from './games/gameCalc.js'
 import gameGcd from './games/gameGcd.js'
 import gameProgression from './games/gameProgression.js'
+import gamePrime from './games/gamePrime.js'
 
 const gameMessages = {
   'brain-even': "Answer 'yes' if the number is even, otherwise answer 'no'.",
   'brain-calc': 'What is the result of the expression?',
   'brain-gcd': 'Find the greatest common divisor of given numbers.',
   'brain-progression': 'What number is missing in the progression?',
+  'brain-prime': 'Answer "yes" if given number is prime. Otherwise answer "no".',
 }
 
 const playGame = (userName, gameFunction, gameMessage) => {
@@ -44,6 +46,9 @@ const startGame = (userName, gameName) => {
       break
     case 'brain-progression':
       playGame(userName, gameProgression, gameMessages[gameName])
+      break
+    case 'brain-prime':
+      playGame(userName, gamePrime, gameMessages[gameName])
       break
     default:
       return { error: 'Bug!' }
