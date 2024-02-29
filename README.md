@@ -16,6 +16,9 @@ calc-game demo:
 gcd-game demo:
 <a href="https://asciinema.org/a/KvPOqfxnAuYdiPW7WK0bvpM5w" target="_blank"><img src="https://asciinema.org/a/KvPOqfxnAuYdiPW7WK0bvpM5w.svg" /></a>
 
+progression-game demo:
+<a href="https://asciinema.org/a/ajpHwFPUo55GoBC5GMucJByf8" target="_blank"><img src="https://asciinema.org/a/ajpHwFPUo55GoBC5GMucJByf8.svg" /></a>
+
 ### Hexlet tests and linter status:
 
 [![Actions Status](https://github.com/cloudfiy/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/cloudfiy/frontend-project-44/actions)
