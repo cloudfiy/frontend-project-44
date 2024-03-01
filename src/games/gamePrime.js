@@ -2,17 +2,17 @@ export default () => {
   const isPrime = (num) => {
     for (let i = 2; i <= Math.sqrt(num); i += 1) {
       if (num % i === 0) {
-        return false
+        return false;
       }
     }
-    return true
-  }
+    return true;
+  };
 
-  let question
+  let question;
   do {
-    question = Math.floor(Math.random() * 100 + 1)
-  } while (question === 2)
-  const correctAnswer = isPrime(question) ? 'yes' : 'no'
+    question = Math.floor(Math.random() * 100 + 1);
+  } while (question === 2);
+  const correctAnswer = isPrime(question) ? 'yes' : 'no';
 
-  return { question, correctAnswer }
-}
+  return { question, correctAnswer };
+};
