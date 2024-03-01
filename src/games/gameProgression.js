@@ -14,7 +14,7 @@ export default () => {
 
   const arr = generateRandomArray(arrLength, step)
 
-  const index = getRandomNum(0, arr.length - 1)
+  const index = getRandomNum(1, arr.length - 2)
   const correctAnswer = arr[index]
 
   const question = arr.map((num) => (num === correctAnswer ? ' .. ' : num)).join(' ')
