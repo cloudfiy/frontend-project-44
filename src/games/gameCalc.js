@@ -7,6 +7,7 @@ export default () => {
 
   const question = `${num1} ${currentOperator} ${num2}`
 
+  // eslint-disable-next-line
   const correctAnswer = eval(question)
 
   return { question, correctAnswer }

@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+
 import getUsername from '../src/cli.js'
 import startGame from '../src/index.js'
 
