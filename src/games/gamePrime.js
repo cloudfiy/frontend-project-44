@@ -8,7 +8,10 @@ export default () => {
     return true
   }
 
-  const question = Math.floor(Math.random() * 100 + 1)
+  let question
+  do {
+    question = Math.floor(Math.random() * 100 + 1)
+  } while (question === 2)
   const correctAnswer = isPrime(question) ? 'yes' : 'no'
 
   return { question, correctAnswer }
