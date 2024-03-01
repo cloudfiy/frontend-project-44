@@ -24,9 +24,8 @@ const playGame = (userName, gameFunction, gameMessage) => {
     if (answer === correctAnswer.toString()) {
       console.log('Correct!')
     } else {
-      return console.log(
-        `'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'\nLets's try again, ${userName}!`
-      )
+      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'`)
+      console.log(`Let's try again, ${userName}!`)
     }
   }
 
