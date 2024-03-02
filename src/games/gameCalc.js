@@ -1,6 +1,22 @@
 import getRandomNumber from '../getRandomNumber.js';
+import startGame from '../index.js';
 
-export default () => {
+const description = 'What is the result of the expression?';
+
+const calculate = (num1, num2, operator) => {
+  switch (operator) {
+    case '+':
+      return num1 + num2;
+    case '-':
+      return num1 - num2;
+    case '*':
+      return num1 * num2;
+    default:
+      throw new Error(`Unknown operator: '${operator}'`);
+  }
+};
+
+const calc = () => {
   const operators = ['+', '-', '*'];
   const currentOperator = operators[Math.floor(Math.random() * operators.length)];
 
@@ -8,22 +24,11 @@ export default () => {
   const num2 = getRandomNumber();
 
   const question = `${num1} ${currentOperator} ${num2}`;
-
-  let correctAnswer;
-
-  switch (currentOperator) {
-    case '+':
-      correctAnswer = num1 + num2;
-      break;
-    case '-':
-      correctAnswer = num1 - num2;
-      break;
-    case '*':
-      correctAnswer = num1 * num2;
-      break;
-    default:
-      console.log('Unknown operator!');
-  }
+  const correctAnswer = calculate(num1, num2, currentOperator);
 
   return { question, correctAnswer };
+};
+
+export default () => {
+  startGame(calc, description);
 };

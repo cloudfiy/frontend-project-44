@@ -1,11 +1,14 @@
 import getRandomNumber from '../getRandomNumber.js';
+import startGame from '../index.js';
+
+const description = 'What number is missing in the progression?';
 
 const generateRandomArray = (length, step) => {
   const firstNum = getRandomNumber(1, 100);
   return Array.from({ length }, (_, i) => firstNum + i * step);
 };
 
-export default () => {
+const progression = () => {
   const minArrLength = 5;
   const maxArrLength = 10;
 
@@ -19,4 +22,8 @@ export default () => {
   const question = arr.map((num) => (num === correctAnswer ? '..' : num)).join(' ');
 
   return { question, correctAnswer };
+};
+
+export default () => {
+  startGame(progression, description);
 };
