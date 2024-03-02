@@ -1,3 +1,13 @@
+# Brain Games
+
+Collection of math mini-games:
+
+- Find even number
+- Calc
+- Find GCD of two numbers
+- Find missing number
+- Is prime number?
+
 ## How to install?
 
 - git clone

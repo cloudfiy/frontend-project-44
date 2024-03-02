@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 
-import getUsername from '../src/cli.js';
 import startGame from '../src/index.js';
 
-const userName = getUsername();
-startGame(userName, 'brain-even');
+const description = 'Answer "yes" if the number is even, otherwise answer "no".';
+startGame('brain-even', description);

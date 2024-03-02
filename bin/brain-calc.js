@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 
-import getUsername from '../src/cli.js';
 import startGame from '../src/index.js';
 
-const userName = getUsername();
-startGame(userName, 'brain-calc');
+const description = 'What is the result of the expression?';
+startGame('brain-calc', description);

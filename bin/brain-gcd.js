@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 
-import getUsername from '../src/cli.js';
 import startGame from '../src/index.js';
 
-const userName = getUsername();
-startGame(userName, 'brain-gcd');
+const description = 'Find the greatest common divisor of given numbers.';
+startGame('brain-gcd', description);

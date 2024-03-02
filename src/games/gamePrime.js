@@ -1,18 +1,21 @@
-export default () => {
-  const isPrime = (num) => {
-    for (let i = 2; i <= Math.sqrt(num); i += 1) {
-      if (num % i === 0) {
-        return false;
-      }
-    }
-    return true;
-  };
+import getRandomNumber from '../getRandomNumber.js';
 
-  let question;
-  do {
-    question = Math.floor(Math.random() * 100 + 1);
-  } while (question === 2);
-  const correctAnswer = isPrime(question) ? 'yes' : 'no';
+const isPrime = (num) => {
+  if (num < 2) {
+    return 'no';
+  }
+
+  for (let i = 2; i <= Math.sqrt(num); i += 1) {
+    if (num % i === 0) {
+      return 'no';
+    }
+  }
+  return 'yes';
+};
+
+export default () => {
+  const question = getRandomNumber(1, 100);
+  const correctAnswer = isPrime(question);
 
   return { question, correctAnswer };
 };

@@ -5,20 +5,16 @@ import gameGcd from './games/gameGcd.js';
 import gameProgression from './games/gameProgression.js';
 import gamePrime from './games/gamePrime.js';
 
-const gameMessages = {
-  'brain-even': 'Answer "yes" if the number is even, otherwise answer "no".',
-  'brain-calc': 'What is the result of the expression?',
-  'brain-gcd': 'Find the greatest common divisor of given numbers.',
-  'brain-progression': 'What number is missing in the progression?',
-  'brain-prime': 'Answer "yes" if given number is prime. Otherwise answer "no".',
-};
-
-const playGame = (userName, gameFunction, gameMessage) => {
-  console.log(gameMessage);
+const playGame = (gameFunction, descriptionGame) => {
+  console.log('Welcome to the Brain Games!');
+  const userName = readlineSync.question('May I have your name? ');
+  console.log(`Hello, ${userName}!`);
+  console.log(descriptionGame);
 
   for (let round = 0; round < 3; round += 1) {
     const { question, correctAnswer } = gameFunction();
     console.log(`Question: ${question}`);
+    console.log(correctAnswer);
     const answer = readlineSync.question('Your answer: ');
 
     if (answer === correctAnswer.toString()) {
@@ -33,22 +29,22 @@ const playGame = (userName, gameFunction, gameMessage) => {
   console.log(`Congratulations, ${userName}!`);
 };
 
-const startGame = (userName, gameName) => {
+const startGame = (gameName, descriptionGame) => {
   switch (gameName) {
     case 'brain-even':
-      playGame(userName, gameEven, gameMessages[gameName]);
+      playGame(gameEven, descriptionGame);
       break;
     case 'brain-calc':
-      playGame(userName, gameCalc, gameMessages[gameName]);
+      playGame(gameCalc, descriptionGame);
       break;
     case 'brain-gcd':
-      playGame(userName, gameGcd, gameMessages[gameName]);
+      playGame(gameGcd, descriptionGame);
       break;
     case 'brain-progression':
-      playGame(userName, gameProgression, gameMessages[gameName]);
+      playGame(gameProgression, descriptionGame);
       break;
     case 'brain-prime':
-      playGame(userName, gamePrime, gameMessages[gameName]);
+      playGame(gamePrime, descriptionGame);
       break;
     default:
       return { error: 'Bug!' };

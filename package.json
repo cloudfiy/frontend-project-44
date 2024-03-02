@@ -1,7 +1,8 @@
 {
   "name": "@hexlet/code",
   "version": "1.0.0",
-  "description": "[![Actions Status](https://github.com/cloudfiy/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/cloudfiy/frontend-project-44/actions)",
+  "description": "Collection of math mini-games",
+  "main": "src/index.js",
   "bin": {
     "brain-games": "bin/brain-games.js",
     "brain-even": "bin/brain-even.js",

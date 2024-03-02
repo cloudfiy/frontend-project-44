@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 
-import getUsername from '../src/cli.js';
 import startGame from '../src/index.js';
 
-const userName = getUsername();
-startGame(userName, 'brain-prime');
+const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+startGame('brain-prime', description);
